@@ -11,7 +11,7 @@
 デモ環境はDockerで構築しています。
 推奨動作環境は以下の通りです。
 
-- Docker Engine  19.03.0+ 以上
+- Docker Engine  19.03.0 以上
 - Docker Compose 1.25.5 以上
 
 Docker Composeを実行するのみで、デモ環境用のコンテナが立ち上がります。
