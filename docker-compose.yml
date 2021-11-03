@@ -1,0 +1,20 @@
+version: "3.8"
+services:
+  app:
+    build: ./docker/php
+    command: php -S 0.0.0.0:8080 -t /app/public
+    volumes:
+      - ./src:/app
+    ports:
+      - 8080:8080
+  db:
+    image: mysql:8.0.27
+    environment: 
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: test_db
+      MYSQL_USER: docker
+      MYSQL_PASSWORD: docker
+      TZ: 'Asia/Tokyo'
+    volumes:
+      - ./initdb.d:/docker-entrypoint-initdb.d
+
